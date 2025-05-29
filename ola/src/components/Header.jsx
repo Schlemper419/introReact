@@ -3,9 +3,20 @@ import './Header.css'
 
 
 function Header() {
+
+  const [searchTerm, setSerchTerm] = React.useState('')
+
   return (
     <div className='Header'>
-        <h1>Dinossauros 🦕🦖☄️ </h1>
+        <h1>Buscador de Personagens - Harry Potter </h1>
+
+        <input type="text"
+        placeholder='Digite o nome...'
+        value={searchTerm}
+        onChange={(e) => setSerchTerm(e.target.value)}
+        className='search'
+       />
+
     </div>
   )
 }
